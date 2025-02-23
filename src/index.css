@@ -3,3 +3,8 @@
   padding: 0px;
   box-sizing:border-box;
 }
+.app{
+  min-width: 100vh;
+  display: grid;
+  
+}
