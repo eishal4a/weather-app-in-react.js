@@ -6,5 +6,5 @@
 .app{
   min-width: 100vh;
   display: grid;
-  
+  background:rgb(199, 152, 243);
 }
