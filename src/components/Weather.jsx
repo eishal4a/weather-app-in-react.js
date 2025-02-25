@@ -1,5 +1,6 @@
 import React from 'react'
 import './Weather.css'
+import search_icon from '../components'
 const Weather = () => {
   return (
     <div className='weather'>
