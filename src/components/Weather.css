@@ -1,6 +1,12 @@
 .search{
     height: 20px;
-    width: 20px;
+    width: 30px;
+    padding: 15px;
+    border-radius: 50%;
+    background: #ebfffc;
+    margin-bottom: -9px;
+    margin-left: 10px;
+    cursor: pointer;
 }
 .weather{
     place-self: center;
@@ -17,6 +23,7 @@
     display: flex;
     align-items: center;
     gap: 12px;
+    justify-content: center;
 }
 .search_bar input{
     height: 50px;
@@ -24,5 +31,7 @@
     outline: none;
     border-radius: 40px;
     padding-left: 25px;
-    
+    color: #626262;
+    background-color: #ebfffc;
+    font-size: 18px;
 }
