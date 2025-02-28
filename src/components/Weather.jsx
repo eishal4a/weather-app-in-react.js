@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from 'react';
 import './Weather.css';
 import search_icon from '../components/search.png';
-import humid_icon from "../components/humid.png";
+import humid_icon from '../components/humid.png';
 import wind_icon from '../components/wind.png';
-import clear_icon from '../components/clear.png';
-import cloud_icon from '../components/cloud.webp'; // Updated to .webp
+import clear_icon from '../components/sun.png';
+import cloud_icon from '../components/cloud.webp';
 
 const Weather = () => {
   const [weatherData, setWeatherData] = useState(null);
@@ -26,18 +26,21 @@ const Weather = () => {
     "13d": clear_icon, // Use appropriate icons for snow
     "13n": clear_icon,
   };
-const apiKey = import.meta.env.VITE_APP_ID;
+
   const search = async (city) => {
     try {
       const url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=${import.meta.env.VITE_APP_ID}`;
+      console.log("Fetching URL:", url); // Log the URL
       const response = await fetch(url);
+      console.log("Response Status:", response.status); // Log the status code
       
-      // Check if the response is ok (status code 200)
       if (!response.ok) {
         throw new Error("City not found");
       }
       
       const data = await response.json();
+      console.log("Response Data:", data); // Log the data received
+
       const icon = allIcons[data.weather[0].icon] || clear_icon; // Default to clear_icon if not found
       setWeatherData({
         humidity: data.main.humidity,

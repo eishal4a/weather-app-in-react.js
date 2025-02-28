@@ -1,12 +1,15 @@
-import React from 'react';
-import Weather from './components/Weather.jsx';
+import React from "react";
+import Weather from "./components/Weather";
+import "./index.css";
+import "./components/Weather.css";
+
 
 const App = () => {
   return (
-    <div className='app'>
+    <div className="app">
       <Weather />
     </div>
   );
-}
+};
 
 export default App;
